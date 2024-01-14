@@ -5,6 +5,6 @@ Name=Bugdom
 Comment=Save Bugdom from Thorax's evil Fire Ants
 Comment[fr]=Libérez le Royaume des Petites Bêtes des maléfiques fourmis de feu
 Icon=io.jor.bugdom
-Exec=/usr/loca/bin/bugdom
+Exec=bugdom
 Terminal=false
 Categories=Game;
