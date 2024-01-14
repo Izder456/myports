@@ -1,0 +1,6 @@
+#!/bin/ksh
+
+(
+    cd /usr/local/lib/Bugdom2
+    exec /usr/local/lib/Bugdom2/Bugdom2
+)

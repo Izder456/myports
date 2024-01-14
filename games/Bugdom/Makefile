@@ -1,53 +1,51 @@
-ONLY_FOR_ARCHS =	amd64 i386
+ONLY_FOR_ARCHS =    amd64 i386
 
-COMMENT = 		pangea software game bugdom for modern systems
+COMMENT =           pangea software game bugdom for modern systems
 
-V = 			1.3.4
-PKGNAME = 		Bugdom
-FULLPKGNAME = 		Bugdom-$V
-GH_ACCOUNT = 		jorio
-GH_PROJECT = 		bugdom
-GH_TAGNAME = 		$V
-DISTNAME = 		bugdom-$V
+V =                 1.3.4
+PKGNAME =           Bugdom
+FULLPKGNAME =       Bugdom-$V
+GH_ACCOUNT =        jorio
+GH_PROJECT =        bugdom
+GH_TAGNAME =        $V
+DISTNAME =          bugdom-$V
 
-DISTFILES.a = 		ef94150e2dcec522e3099f4d03a4e8f2639f7232.zip
-DIST_SUBDIR = 		bugdom
-SITES.a = 		https://github.com/jorio/Pomme/archive/
+DISTFILES.a =       ef94150e2dcec522e3099f4d03a4e8f2639f7232.zip
+DIST_SUBDIR =       bugdom
+SITES.a =           https://github.com/jorio/Pomme/archive/
 
-CATEGORIES = 		games
+CATEGORIES =        games
 
-HOMEPAGE = 		https://pangeasoft.net/bug
+HOMEPAGE =          https://pangeasoft.net/bug
 
-MAINTAINER = 		izzy Meyer <izder456@disroot.org>
+MAINTAINER =        izzy Meyer <izder456@disroot.org>
 
 # BY-NC-SA
-PERMIT_PACKAGE =	Yes
+PERMIT_PACKAGE =    Yes
 
-COMPILER =		base-clang ports-gcc
+COMPILER =          base-clang ports-gcc
 
-MODULES = 		devel/cmake
+MODULES =           devel/cmake
 
-# Dependencies
-BUILD_DEPENDS =		devel/sdl2 \
-					audio/libsamplerate
-LIB_DEPENDS =  		devel/sdl2
-RUN_DEPENDS =		devel/sdl2 \
-					audio/libsamplerate \
-					devel/desktop-file-utils \
-					x11/gtk+4,-guic
+BUILD_DEPENDS =     devel/sdl2 \
+                    audio/libsamplerate
+LIB_DEPENDS =       devel/sdl2
+RUN_DEPENDS =       devel/sdl2 \
+                    audio/libsamplerate \
+                    devel/desktop-file-utils \
+                    x11/gtk+4,-guic
 
-WANTLIB += ${COMPILER_LIBCXX} GL SDL2 c m
+WANTLIB +=          ${COMPILER_LIBCXX} GL SDL2 c m
 
+NO_TEST =           Yes
 
-NO_TEST = 		Yes
+CFLAGS +=           -I${X11BASE}/include
+CXXFLAGS +=         -I${X11BASE}/include
 
-CFLAGS += 		-I${X11BASE}/include
-CXXFLAGS += 		-I${X11BASE}/include
+CONFIGURE_ARGS +=   -DCMAKE_BUILD_TYPE=Release \
+                    -DCMAKE_INSTALL_PREFIX=${LOCALBASE}
 
-CONFIGURE_ARGS += 	-DCMAKE_BUILD_TYPE=Release \
-			-DCMAKE_INSTALL_PREFIX=${LOCALBASE}
-
-WRKDIST = 		${WRKDIR}/Bugdom-$V
+WRKDIST =           ${WRKDIR}/Bugdom-$V
 
 post-extract:
 	mkdir -p ${WRKDIST}/extern/Pomme
