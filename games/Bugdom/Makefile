@@ -30,10 +30,11 @@ MODULES = 		devel/cmake
 # Dependencies
 BUILD_DEPENDS =		devel/sdl2 \
 					audio/libsamplerate
-LIB_DEPENDS =  		devel/sdl2 \
-					audio/libsamplerate
+LIB_DEPENDS =  		devel/sdl2
 RUN_DEPENDS =		devel/sdl2 \
-					audio/libsamplerate
+					audio/libsamplerate \
+					devel/desktop-file-utils \
+					x11/gtk+4,-guic
 
 WANTLIB += ${COMPILER_LIBCXX} GL SDL2 c m
 
@@ -54,17 +55,22 @@ post-extract:
 	  ${WRKDIST}/extern/Pomme
 
 do-install:
-	mkdir -p ${PREFIX}/share/Bugdom
-	cp ${WRKSRC}/README.md ${PREFIX}/share/Bugdom
-	cp ${WRKSRC}/CHANGELOG.md ${PREFIX}/share/Bugdom
-	cp ${WRKSRC}/COMMANDLINE.md ${PREFIX}/share/Bugdom
-	cp ${WRKSRC}/LICENSE.md ${PREFIX}/share/Bugdom
-	cp -r ${WRKBUILD}/Data ${PREFIX}/share/Bugdom
-	mkdir -p ${PREFIX}/bin
-	cp ${WRKBUILD}/Bugdom ${PREFIX}/bin
-	mkdir -p ${PREFIX}/share/applications
-	cp ${WRKSRC}/packaging/io.jor.bugdom.desktop ${PREFIX}/share/applications
-	mkdir -p ${PREFIX}/share/icons
-	cp ${WRKSRC}/packaging/io.jor.bugdom.png ${PREFIX}/share/icons
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/Bugdom/
+	${INSTALL_DATA} ${WRKSRC}/README.md ${PREFIX}/share/doc/Bugdom/
+	${INSTALL_DATA} ${WRKSRC}/CHANGELOG.md ${PREFIX}/share/doc/Bugdom/
+	${INSTALL_DATA} ${WRKSRC}/COMMANDLINE.md ${PREFIX}/share/doc/Bugdom/
+	${INSTALL_DATA} ${WRKSRC}/LICENSE.md ${PREFIX}/share/doc/Bugdom/
+	${INSTALL_DATA_DIR} ${PREFIX}/lib/Bugdom/
+	${INSTALL_DATA_DIR} ${PREFIX}/lib/Bugdom/Data
+	${INSTALL_PROGRAM} ${WRKBUILD}/Bugdom ${PREFIX}/lib/Bugdom/
+	${INSTALL_SCRIPT} ${FILESDIR}/bugdom ${PREFIX}/bin/
+	cp -rvf ${WRKBUILD}/Data ${PREFIX}/lib/Bugdom/
+	${INSTALL_DATA_DIR} ${PREFIX}/share/icons/hicolor/512x512/apps/ \
+		${PREFIX}/share/applications/
+	${INSTALL_DATA} ${FILESDIR}/io.jor.bugdom.png \
+		${PREFIX}/share/icons/hicolor/512x512/apps/
+	${SUBST_CMD} -c -m ${SHAREMODE} -o ${SHAREOWN} -g ${SHAREGRP} \
+		${FILESDIR}/io.jor.bugdom.desktop \
+		${PREFIX}/share/applications/io.jor.bugdom.desktop
 
 .include <bsd.port.mk>
