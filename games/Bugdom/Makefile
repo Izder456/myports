@@ -28,8 +28,13 @@ COMPILER =		base-clang ports-gcc
 MODULES = 		devel/cmake
 
 # Dependencies
-BUILD_DEPENDS =		devel/sdl2
-LIB_DEPENDS =  		devel/sdl2
+BUILD_DEPENDS =		devel/sdl2 \
+					audio/libsamplerate
+LIB_DEPENDS =  		devel/sdl2 \
+					audio/libsamplerate
+RUN_DEPENDS =		devel/sdl2 \
+					audio/libsamplerate
+
 WANTLIB += ${COMPILER_LIBCXX} GL SDL2 c m
 
 
@@ -56,7 +61,7 @@ do-install:
 	cp ${WRKSRC}/LICENSE.md ${PREFIX}/share/Bugdom
 	cp -r ${WRKBUILD}/Data ${PREFIX}/share/Bugdom
 	mkdir -p ${PREFIX}/bin
-	install ${WRKBUILD}/Bugdom ${PREFIX}/bin
+	cp ${WRKBUILD}/Bugdom ${PREFIX}/bin
 	mkdir -p ${PREFIX}/share/applications
 	cp ${WRKSRC}/packaging/io.jor.bugdom.desktop ${PREFIX}/share/applications
 	mkdir -p ${PREFIX}/share/icons
