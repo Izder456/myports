@@ -20,7 +20,7 @@ HOMEPAGE =        https://pangeasoft.net/bug2
 
 MAINTAINER =      izzy Meyer <izder456@disroot.org>
 
-# BY-NC-SA
+# CC-BY-NC SA 4.0
 PERMIT_PACKAGE =  Yes
 
 COMPILER =        base-clang ports-gcc

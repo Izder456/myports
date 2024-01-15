@@ -20,7 +20,7 @@ HOMEPAGE =          https://pangeasoft.net/bug
 
 MAINTAINER =        izzy Meyer <izder456@disroot.org>
 
-# BY-NC-SA
+# CC-BY-NC SA 4.0
 PERMIT_PACKAGE =    Yes
 
 COMPILER =          base-clang ports-gcc
@@ -57,6 +57,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/README.md ${PREFIX}/share/doc/Bugdom/
 	${INSTALL_DATA} ${WRKSRC}/CHANGELOG.md ${PREFIX}/share/doc/Bugdom/
 	${INSTALL_DATA} ${WRKSRC}/COMMANDLINE.md ${PREFIX}/share/doc/Bugdom/
+	${INSTALL_DATA} ${WRKSRC}/CHEATS.md ${PREFIX}/share/doc/Bugdom/
 	${INSTALL_DATA} ${WRKSRC}/LICENSE.md ${PREFIX}/share/doc/Bugdom/
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/Bugdom/
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/Bugdom/Data
