@@ -2,7 +2,8 @@ ONLY_FOR_ARCHS =    amd64 i386
 
 COMMENT =           pangea software game cro mag rally for modern systems
 
-# Commit id fixed the ByteSwap terrain compile-time error (latest ID as of writing)
+# Commit id fixed the ByteSwap terrain compile-time error
+# (latest ID as of writing)
 
 V =                 3.0.0
 C =					5983de40c180b50bbbec8b04f5f5f1ceccd1901b
