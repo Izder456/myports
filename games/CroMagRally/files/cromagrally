@@ -1,0 +1,6 @@
+#!/bin/ksh
+
+(
+    cd /usr/local/lib/CroMagRally
+    exec /usr/local/lib/CroMagRally/CroMagRally
+)
