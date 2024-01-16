@@ -458,6 +458,7 @@ lib/OttoMatic/Data/Terrain/Saucer.ter.rsrc
 @bin lib/OttoMatic/OttoMatic
 share/applications/io.jor.ottomatic.desktop
 share/doc/OttoMatic/
+share/doc/OttoMatic/BUILD.md
 share/doc/OttoMatic/CHANGELOG.md
 share/doc/OttoMatic/COMMANDLINE.md
 share/doc/OttoMatic/LICENSE.md

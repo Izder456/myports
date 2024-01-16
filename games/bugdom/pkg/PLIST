@@ -227,6 +227,7 @@ lib/Bugdom/Data/Terrain/QueenBee.ter.rsrc
 lib/Bugdom/Data/Terrain/Training.ter.rsrc
 share/applications/io.jor.bugdom.desktop
 share/doc/Bugdom/
+share/doc/Bugdom/BUILD.md
 share/doc/Bugdom/CHANGELOG.md
 share/doc/Bugdom/CHEATS.md
 share/doc/Bugdom/COMMANDLINE.md

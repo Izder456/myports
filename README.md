@@ -2,7 +2,7 @@
 
 ## What is here currently?
 *Not Much*
-- [games/Bugdom](games/Bugdom) - Pangea Software's Bugdom For Modern Systems
-- [games/Bugdom2](games/Bugdom2) - Pangea Software's Bugdom 2 For Modern Systems
-- [games/OttoMatic](games/OttoMatic) - Pangea Software's OttoMatic For Modern Systems
-- [games/CroMagRally](games/CroMagRally) - Pangea Software's CroMagRally For Modern Systems
+- [games/bugdom](games/bugdom) - family-friendly 3D action adventure
+- [games/bugdom2](games/bugdom2) - sequel to the family-friendly 3D action adventure
+- [games/ottomatic](games/ottomatic) - family-friendly 3D third person sci-fi action arcade
+- [games/cromagrally](games/cromagrally) - family-friendly stone-age 3D kart racing game

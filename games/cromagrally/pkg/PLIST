@@ -291,6 +291,7 @@ lib/CroMagRally/Data/Terrain/StoneAge_Jungle.ter
 lib/CroMagRally/Data/Terrain/StoneAge_Jungle.ter.rsrc
 share/applications/cromagrally.desktop
 share/doc/CroMagRally/
+share/doc/CroMagRally/BUILD.md
 share/doc/CroMagRally/CHANGELOG.md
 share/doc/CroMagRally/LICENSE.md
 share/doc/CroMagRally/README.md
