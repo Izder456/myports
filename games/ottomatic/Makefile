@@ -1,8 +1,7 @@
 COMMENT = family-friendly 3D third person sci-fi action arcade
 
 V = 4.0.1
-PKGNAME = ottomatic
-FULLPKGNAME = ottomatic-${V}
+PKGNAME = ottomatic-${V}
 DIST_TUPLE += github jorio OttoMatic ${V} .
 DIST_TUPLE += github jorio Pomme ef94150e2dcec522e3099f4d03a4e8f2639f7232 \
               extern/Pomme
