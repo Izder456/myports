@@ -35,20 +35,19 @@ CXXFLAGS += -I${X11BASE}/include
 
 CONFIGURE_ARGS += -DCMAKE_BUILD_TYPE=Release \
                   -DCMAKE_INSTALL_PREFIX=${LOCALBASE}
+pre-configure:
+	${SUBST_CMD} ${WRKSRC}/src/Boot.cpp
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/Bugdom/
 	${INSTALL_DATA} ${WRKSRC}/*.md ${PREFIX}/share/doc/Bugdom/
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/Bugdom/Data
-	${INSTALL_PROGRAM} ${WRKBUILD}/Bugdom ${PREFIX}/lib/Bugdom/
-	${INSTALL_SCRIPT} ${FILESDIR}/bugdom ${PREFIX}/bin/
-	cp -Rv ${WRKBUILD}/Data/* ${PREFIX}/lib/Bugdom/Data/
+	${INSTALL_PROGRAM} ${WRKBUILD}/Bugdom ${PREFIX}/bin/
+	cp -R ${WRKBUILD}/Data ${PREFIX}/share/bugdom
 	${INSTALL_DATA_DIR} ${PREFIX}/share/icons/hicolor/512x512/apps/ \
 		${PREFIX}/share/applications/
-	${INSTALL_DATA} ${FILESDIR}/io.jor.bugdom.png \
+	${INSTALL_DATA} ${WRKSRC}/packaging/io.jor.bugdom.png \
 		${PREFIX}/share/icons/hicolor/512x512/apps/
-	${SUBST_CMD} -c -m ${SHAREMODE} -o ${SHAREOWN} -g ${SHAREGRP} \
-		${FILESDIR}/io.jor.bugdom.desktop \
-		${PREFIX}/share/applications/io.jor.bugdom.desktop
+	${INSTALL_DATA} ${WRKSRC}/packaging/io.jor.bugdom.desktop \
+		${PREFIX}/share/applications/
 
 .include <bsd.port.mk>

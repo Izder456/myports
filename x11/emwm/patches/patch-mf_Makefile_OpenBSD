@@ -1,0 +1,23 @@
+Index: mf/Makefile.OpenBSD
+--- mf/Makefile.OpenBSD.orig
++++ mf/Makefile.OpenBSD
+@@ -1,14 +1,14 @@
+ # EMWM OpenBSD Makefile
+ 
+-PREFIX = /usr/local
+-MANDIR = /usr/local/man
+-RCDIR = /usr/X11R6/lib/X11
+-APPLRESDIR = /usr/X11R6/lib/X11/app-defaults
++PREFIX ?= /usr/local
++MANDIR = $(PREFIX)/man
++RCDIR = $(PREFIX)/lib/X11
++APPLRESDIR = $(PREFIX)/lib/X11/app-defaults
+ 
+ INCDIRS = -I/usr/X11R6/include -I/usr/local/include
+ LIBDIRS = -L/usr/X11R6/lib -L/usr/local/lib
+ 
+-CFLAGS = -O2 -Wall $(INCDIRS)
++CFLAGS += -Wall $(INCDIRS)
+ 
+ .c.o:
+ 	$(CC) $(CFLAGS) $(DEFINES) $(INCDIRS) -c -o $(@D)/$(@F) $<
