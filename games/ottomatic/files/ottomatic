@@ -1,6 +1,0 @@
-#!/bin/ksh
-
-(
-    cd /usr/local/lib/OttoMatic
-    exec /usr/local/lib/OttoMatic/OttoMatic
-)
