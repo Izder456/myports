@@ -13,7 +13,7 @@ HOMEPAGE = https://pangeasoft.net/bug2
 
 MAINTAINER = izzy Meyer <izder456@disroot.org>
 
-# CC-BY-NC SA 4.0
+# game: CC BY-NC-SA 4.0; extern/Pomme: MIT, LGPLv2.1, BSD, Boost
 PERMIT_PACKAGE = Yes
 
 WANTLIB += ${COMPILER_LIBCXX} GL SDL2 c m
@@ -37,19 +37,19 @@ CXXFLAGS += -I${X11BASE}/include
 CONFIGURE_ARGS += -DCMAKE_BUILD_TYPE=Release \
                   -DCMAKE_INSTALL_PREFIX=${LOCALBASE}
 
+pre-configure:
+	${SUBST_CMD} ${WRKSRC}/Source/Boot.cpp
+
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/Bugdom2/
 	${INSTALL_DATA} ${WRKSRC}/*.md ${PREFIX}/share/doc/Bugdom2/
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/Bugdom2/Data
-	${INSTALL_PROGRAM} ${WRKBUILD}/Bugdom2 ${PREFIX}/lib/Bugdom2/
-	${INSTALL_SCRIPT} ${FILESDIR}/bugdom2 ${PREFIX}/bin/
-	cp -Rv ${WRKBUILD}/Data/* ${PREFIX}/lib/Bugdom2/Data
+	${INSTALL_PROGRAM} ${WRKBUILD}/Bugdom2 ${PREFIX}/bin/
+	cp -R ${WRKBUILD}/Data ${PREFIX}/share/bugdom2
 	${INSTALL_DATA_DIR} ${PREFIX}/share/icons/hicolor/512x512/apps/ \
 		${PREFIX}/share/applications/
-	${INSTALL_DATA} ${FILESDIR}/io.jor.bugdom2.png \
+	${INSTALL_DATA} ${WRKSRC}/packaging/io.jor.bugdom2.png \
 		${PREFIX}/share/icons/hicolor/512x512/apps/
-	${SUBST_CMD} -c -m ${SHAREMODE} -o ${SHAREOWN} -g ${SHAREGRP} \
-		${FILESDIR}/io.jor.bugdom2.desktop \
-		${PREFIX}/share/applications/io.jor.bugdom2.desktop
+	${INSTALL_DATA} ${WRKSRC}/packaging/io.jor.bugdom2.desktop \
+		${PREFIX}/share/applications/
 
 .include <bsd.port.mk>

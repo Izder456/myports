@@ -1,6 +1,0 @@
-#!/bin/ksh
-
-(
-    cd /usr/local/lib/Bugdom
-    exec /usr/local/lib/Bugdom/Bugdom
-)

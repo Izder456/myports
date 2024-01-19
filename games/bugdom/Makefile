@@ -2,8 +2,8 @@ COMMENT = family-friendly 3D action adventure
 
 V = 1.3.4
 PKGNAME = bugdom-${V}
-DIST_TUPLE +=	github jorio Bugdom ${V} .
-DIST_TUPLE +=	github jorio Pomme ef94150e2dcec522e3099f4d03a4e8f2639f7232 \
+DIST_TUPLE += github jorio Bugdom ${V} .
+DIST_TUPLE += github jorio Pomme ef94150e2dcec522e3099f4d03a4e8f2639f7232 \
               extern/Pomme
 
 CATEGORIES =  games
@@ -12,7 +12,7 @@ HOMEPAGE = https://pangeasoft.net/bug
 
 MAINTAINER = izzy Meyer <izder456@disroot.org>
 
-# CC-BY-NC SA 4.0
+# game: CC BY-NC-SA 4.0; extern/Pomme: MIT, LGPLv2.1, BSD, Boost
 PERMIT_PACKAGE = Yes
 
 WANTLIB += ${COMPILER_LIBCXX} GL SDL2 c m

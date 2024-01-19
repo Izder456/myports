@@ -232,5 +232,5 @@ share/doc/Bugdom/COMMANDLINE.md
 share/doc/Bugdom/LICENSE.md
 share/doc/Bugdom/README.md
 share/icons/hicolor/512x512/apps/io.jor.bugdom.png
-@tag update-desktop-database
 @tag gtk-update-icon-cache %D/share/icons/hicolor
+@tag update-desktop-database
