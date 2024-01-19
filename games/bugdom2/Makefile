@@ -1,38 +1,37 @@
-COMMENT = sequel to the family-friendly 3D action adventure
+COMMENT =         sequel to the family-friendly 3D action adventure
 
-V = 4.0.0
+V =               4.0.0
+PKGNAME =         bugdom2-${V}
+DIST_TUPLE +=     github jorio Bugdom2 v${V} .
+DIST_TUPLE +=     github jorio Pomme c6a38eab19a11847024a13f9b3e2af0c2d908c3e \
+                  extern/Pomme
 
-PKGNAME = bugdom2-${V}
-DIST_TUPLE += github jorio Bugdom2 v${V} .
-DIST_TUPLE += github jorio Pomme c6a38eab19a11847024a13f9b3e2af0c2d908c3e \
-              extern/Pomme
+CATEGORIES =      games
 
-CATEGORIES = games
+HOMEPAGE =        https://pangeasoft.net/bug2
 
-HOMEPAGE = https://pangeasoft.net/bug2
-
-MAINTAINER = izzy Meyer <izder456@disroot.org>
+MAINTAINER =      izzy Meyer <izder456@disroot.org>
 
 # game: CC BY-NC-SA 4.0; extern/Pomme: MIT, LGPLv2.1, BSD, Boost
-PERMIT_PACKAGE = Yes
+PERMIT_PACKAGE =  Yes
 
-WANTLIB += ${COMPILER_LIBCXX} GL SDL2 c m
+WANTLIB +=        ${COMPILER_LIBCXX} GL SDL2 c m
 
 # C++20
-COMPILER =base-clang ports-gcc
+COMPILER =        base-clang ports-gcc
 
-MODULES = devel/cmake
+MODULES =         devel/cmake
 
-BUILD_DEPENDS = audio/libsamplerate
-LIB_DEPENDS = devel/sdl2
-RUN_DEPENDS = audio/libsamplerate \
-              devel/desktop-file-utils \
-              x11/gtk+4,-guic
+BUILD_DEPENDS =   audio/libsamplerate
+LIB_DEPENDS =     devel/sdl2
+RUN_DEPENDS =     audio/libsamplerate \
+                  devel/desktop-file-utils \
+                  x11/gtk+4,-guic
 
-NO_TEST = Yes
+NO_TEST =         Yes
 
-CFLAGS += -I${X11BASE}/include
-CXXFLAGS += -I${X11BASE}/include
+CFLAGS +=         -I${X11BASE}/include
+CXXFLAGS +=       -I${X11BASE}/include
 
 CONFIGURE_ARGS += -DCMAKE_BUILD_TYPE=Release \
                   -DCMAKE_INSTALL_PREFIX=${LOCALBASE}
