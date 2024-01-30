@@ -1,0 +1,11 @@
+--- Source/Main.cpp.orig	Tue Jan 30 01:11:53 2024
++++ Source/Main.cpp	Tue Jan 30 01:13:30 2024
+@@ -51,7 +51,7 @@
+ 	dataPath = pathbuf;
+ 	dataPath = dataPath.parent_path().parent_path() / "Resources";
+ #else
+-	dataPath = "Data";
++	dataPath = "${TRUEPREFIX}/share/cromagrally";
+ #endif
+ 
+ 	dataPath = dataPath.lexically_normal();
