@@ -1,32 +1,32 @@
-COMMENT =         family-friendly action game in a toy store
+COMMENT = family-friendly action game in a toy store
 
-V =               3.0.2
-PKGNAME =         mightymike-${V}
+V = 3.0.2
+PKGNAME = mightymike-${V}
 DIST_TUPLE +=     github jorio MightyMike v${V} .
 DIST_TUPLE +=     github jorio Pomme d57c28e205462e51063e787f9ebddaadff592f1e \
                   extern/Pomme
 
-CATEGORIES =      games
+CATEGORIES = games
 
-HOMEPAGE =        https://pangeasoft.net/mightymike
+HOMEPAGE = https://pangeasoft.net/mightymike
 
-MAINTAINER =      izzy Meyer <izder456@disroot.org>
+MAINTAINER = izzy Meyer <izder456@disroot.org>
 
 # game: CC BY-NC-SA 4.0; extern/Pomme: MIT, LGPLv2.1, BSD, Boost
-PERMIT_PACKAGE =  Yes
+PERMIT_PACKAGE = Yes
 
 WANTLIB +=        ${COMPILER_LIBCXX} GL SDL2 c m
 
 # C++20
-COMPILER =        base-clang ports-gcc
+COMPILER = base-clang ports-gcc
 
-MODULES =         devel/cmake
+MODULES = devel/cmake
 
-LIB_DEPENDS =     devel/sdl2
-RUN_DEPENDS =     devel/desktop-file-utils \
+LIB_DEPENDS = devel/sdl2
+RUN_DEPENDS = devel/desktop-file-utils \
                   x11/gtk+4,-guic
 
-NO_TEST =         Yes
+NO_TEST = Yes
 
 CFLAGS +=         -I${X11BASE}/include
 CXXFLAGS +=       -I${X11BASE}/include
