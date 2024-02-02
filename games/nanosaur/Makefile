@@ -22,10 +22,8 @@ COMPILER =        base-clang ports-gcc
 
 MODULES =         devel/cmake
 
-BUILD_DEPENDS =   audio/libsamplerate
 LIB_DEPENDS =     devel/sdl2
-RUN_DEPENDS =     audio/libsamplerate \
-                  devel/desktop-file-utils \
+RUN_DEPENDS =     devel/desktop-file-utils \
                   x11/gtk+4,-guic
 
 NO_TEST =         Yes
