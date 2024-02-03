@@ -14,5 +14,6 @@
 - ~~[games/cromagrally](https://cvsweb.openbsd.org/cgi-bin/cvsweb/ports/games/cromagrally) - family-friendly bronze age kart game~~ *merged upstream*
 - [games/nanosaur](games/nanosaur) - Pangea Software Original Nanosaur for modern systems
 - [games/mightymike](games/mightymike) - family-friendly action game in a toy store
+- [games/billyfrontier](games/billyfrontier) - quicktime space-age spaghetti western
 - [x11/emwm](x11/emwm) - enhanced motif window manager (MWM fork)
 - [x11/emwm-utils](x11/emwm-utils) - session manager and a toolchest-like application launcher.

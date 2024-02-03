@@ -293,5 +293,5 @@ share/doc/BillyFrontier/CHANGELOG.md
 share/doc/BillyFrontier/LICENSE.md
 share/doc/BillyFrontier/README.md
 share/icons/hicolor/512x512/apps/io.jor.billyfrontier.png
-@tag gtk-update-icon-cache %D/share/icons/hicolor
 @tag update-desktop-database
+@tag gtk-update-icon-cache %D/share/icons/hicolor
