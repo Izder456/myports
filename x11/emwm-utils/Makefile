@@ -1,8 +1,10 @@
 COMMENT = session manager and a toolchest-like application launcher.
 
-GH_ACCOUNT = alx210
-GH_PROJECT = emwm-utils
-GH_TAGNAME = v1.1
+V = 1.2
+SITES = https://fastestcode.org/dl/
+DISTNAME = emwm-utils-src-${V}
+PKGNAME = emwm-utils-${V}
+EXTRACT_SUFX = .tar.xz
 
 CATEGORIES = x11
 

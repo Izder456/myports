@@ -1,8 +1,10 @@
 COMMENT = enhanced motif window manager (MWM fork)
 
-GH_ACCOUNT = alx210
-GH_PROJECT = emwm
-GH_TAGNAME = v1.1
+V = 1.2
+SITES = https://fastestcode.org/dl/
+DISTNAME = emwm-src-${V}
+PKGNAME = emwm-${V}
+EXTRACT_SUFX = .tar.xz
 
 CATEGORIES = x11
 
