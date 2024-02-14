@@ -6,7 +6,7 @@ PKGNAME =	deadbeef-plugin-mpris2-${V}
 
 CATEGORIES =	audio
 
-HOMEPAGE =		https://github.com/DeaDBeeF-Player/deadbeef-mpris2-plugin
+HOMEPAGE =	https://github.com/DeaDBeeF-Player/deadbeef-mpris2-plugin
 
 MAINTAINER =	izzy Meyer <izder456@disroot.org>
 
@@ -19,8 +19,10 @@ WANTLIB +=	pthread iconv intl pcre2-8 z ffi
 COMPILER =	base-clang ports-gcc
 
 
-LIB_DEPENDS =	devel/pcre2
-BUILD_DEPENDS =	devel/libtool \
+LIB_DEPENDS =		devel/glib2 \
+				devel/pcre2
+
+BUILD_DEPENDS =		devel/libtool \
 				devel/libffi \
 				devel/pcre2
 RUN_DEPENDS =	audio/deadbeef
@@ -28,11 +30,11 @@ RUN_DEPENDS =	audio/deadbeef
 CONFIGURE_STYLE =	autoreconf
 
 CONFIGURE_ENV +=	CPPFLAGS='-I${LOCALBASE}/include \
-					-I${X11BASE}/include' \
-					LDFLAGS='-L${LOCALBASE}/lib -L${X11BASE}/lib' \
+				-I${X11BASE}/include' \
+				LDFLAGS='-L${LOCALBASE}/lib -L${X11BASE}/lib' \
 
 CONFIGURE_ARGS =	--prefix ${LOCALBASE} \
-					--disable-static
+				--disable-static
 
 LIBTOOL_FLAGS =	--tag=disable-static
 
