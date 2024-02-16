@@ -1,0 +1,13 @@
+--- src/CMakeLists.txt.orig	Fri Feb 16 14:29:29 2024
++++ src/CMakeLists.txt	Fri Feb 16 14:33:41 2024
+@@ -129,8 +129,8 @@
+ 
+ if (WIN32)
+     target_link_libraries(core PRIVATE ole32 comctl32 ws2_32)
+-elseif(NOT APPLE)
+-    target_link_libraries(core PRIVATE rt)
++elseif(${CMAKE_SYSTEM_NAME} MATCHES "OpenBSD")
++    target_link_libraries(core PRIVATE)
+ endif()
+ 
+ if (ENABLE_JIT_PROFILING)

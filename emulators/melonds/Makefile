@@ -20,15 +20,15 @@ WANTLIB +=	intl m pango-1.0 pangocairo-1.0
 
 MODULES =		devel/cmake
 LIB_DEPENDS =	devel/sdl2 \
-				x11/gtk+3 \
+				x11/gtk+3
+BUILD_DEPENDS =	x11/qt5/qtbase \
 				net/libslirp
-BUILD_DEPENDS =	x11/qt5/qtbase
 
 CONFIGURE_ARGS +=	-DQt5_DIR="${LOCALBASE}/lib/qt5/cmake/Qt5" \
 					-DBUILD_STATIC=OFF \
 					-DENABLE_JIT=OFF \
-					-DENABLE_LTO_RELEASE=OFF \
-					-DENABLE_LTO=OFF \
+					-DENABLE_LTO_RELEASE=ON \
+					-DENABLE_LTO=ON \
 					-DCMAKE_BUILD_TYPE=Release
 
 NO_TEST =		Yes
