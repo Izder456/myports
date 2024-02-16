@@ -1,5 +1,5 @@
---- src/CMakeLists.txt.orig	Fri Feb 16 14:29:29 2024
-+++ src/CMakeLists.txt	Fri Feb 16 14:33:41 2024
+--- src/CMakeLists.txt.orig
++++ src/CMakeLists.txt
 @@ -129,8 +129,8 @@
  
  if (WIN32)
