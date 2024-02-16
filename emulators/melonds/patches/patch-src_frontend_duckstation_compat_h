@@ -1,0 +1,10 @@
+--- src/frontend/duckstation/duckstation_compat.h.orig	Fri Feb 16 11:19:28 2024
++++ src/frontend/duckstation/duckstation_compat.h	Fri Feb 16 11:20:44 2024
+@@ -12,6 +12,4 @@
+ 
+ #define Panic(msg) assert(false && msg)
+ 
+-#define UnreachableCode() __builtin_unreachable
+-
+ #endif
+\ No newline at end of file

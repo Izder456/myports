@@ -1,0 +1,11 @@
+--- src/frontend/duckstation/gl/context_glx.cpp.orig	Fri Feb 16 11:22:51 2024
++++ src/frontend/duckstation/gl/context_glx.cpp	Fri Feb 16 11:23:13 2024
+@@ -225,7 +225,7 @@
+       break;
+ 
+     default:
+-      UnreachableCode();
++      __builtin_unreachable();
+       break;
+   }
+ 
