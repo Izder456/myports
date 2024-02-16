@@ -17,4 +17,4 @@
 - ~~[games/billyfrontier](https://cvsweb.openbsd.org/ports/games/billyfrontier) - quicktime space-age spaghetti western~~ *merged upstream*
 - [x11/emwm](x11/emwm) - enhanced motif window manager (MWM fork)
 - [x11/emwm-utils](x11/emwm-utils) - session manager and a toolchest-like application launcher.
-- [audio/deadbeef-plugin-mpris2](audio/deadbeef-plugin-mpris2) - deadbeef plugin for mpris2 support
+- ~~[audio/deadbeef-plugin-mpris2](https://cvsweb.openbsd.org/ports/audio/deadbeef-plugin-mpris2) - deadbeef plugin for mpris2 support~~ *merges upstream*
