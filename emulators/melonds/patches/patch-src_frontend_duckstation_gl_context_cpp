@@ -1,0 +1,14 @@
+--- src/frontend/duckstation/gl/context.cpp.orig	Fri Feb 16 10:39:18 2024
++++ src/frontend/duckstation/gl/context.cpp	Fri Feb 16 10:39:24 2024
+@@ -3,11 +3,7 @@
+ #include "loader.h"
+ #include <cstdlib>
+ #include <cstring>
+-#ifdef __APPLE__
+ #include <stdlib.h>
+-#else
+-#include <malloc.h>
+-#endif
+ Log_SetChannel(GL::Context);
+ 
+ #if defined(_WIN32) && !defined(_M_ARM64)

@@ -1,0 +1,23 @@
++-------------------------------------------------------------------------------
+| Running ${FULLPKGNAME} on OpenBSD
++-------------------------------------------------------------------------------
+
+Caveat
+=========
+
+Unfortunately, MelonDS's JIT support, makes build fail on OpenBSD.
+Because of this, JIT support is DISABLED for now.
+
+Firmwares
+=========
+
+melonDS requires BIOS/firmware copies from a DS. Files required:
+
+- bios7.bin, 16KB: ARM7 BIOS
+- bios9.bin, 4KB: ARM9 BIOS
+- firmware.bin, 128/256/512KB: firmware
+
+Firmware boot requires a firmware dump from an original DS or DS Lite.
+DS firmwares dumped from a DSi or 3DS aren't bootable and only contain
+configuration data, thus they are only suitable when booting games
+directly.
