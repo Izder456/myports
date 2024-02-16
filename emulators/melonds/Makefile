@@ -23,6 +23,9 @@ LIB_DEPENDS =	devel/sdl2 \
 				x11/gtk+3
 BUILD_DEPENDS =	x11/qt5/qtbase \
 				net/libslirp
+RUN_DEPENDS =	x11/gtk+4,-guic \
+				devel/desktop-file-utils
+
 
 CONFIGURE_ARGS +=	-DQt5_DIR="${LOCALBASE}/lib/qt5/cmake/Qt5" \
 					-DBUILD_STATIC=OFF \
