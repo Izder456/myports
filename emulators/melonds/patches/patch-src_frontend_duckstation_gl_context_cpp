@@ -1,3 +1,4 @@
+Index: src/frontend/duckstation/gl/context.cpp
 --- src/frontend/duckstation/gl/context.cpp.orig
 +++ src/frontend/duckstation/gl/context.cpp
 @@ -3,11 +3,7 @@
