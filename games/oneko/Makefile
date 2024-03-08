@@ -1,8 +1,7 @@
 COMMENT =		cat that chases around your cursor
 
 V =			1.2
-PKGNAME =		oneko
-FULLPKGNAME =		oneko-sakura-$V
+PKGNAME =		oneko-sakura-$V
 
 CATEGORIES =		games
 
@@ -14,7 +13,7 @@ WANTLIB += 		X11 Xau Xdmcp Xext c m
 
 SITES =			http://www.daidouji.com/oneko/distfiles/
 
-DISTNAME =		${PKGNAME}-$V.sakura.5
+DISTNAME =		oneko-$V.sakura.5
 
 COMPILER =		base-clang ports-gcc base-gcc
 
