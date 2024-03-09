@@ -7,9 +7,10 @@ CATEGORIES =		games
 
 HOMEPAGE =		http://www.daidouji.com/oneko
 
+# License: Custom, includes derivates of CARDCAPTOR SAKURA, see https://www.clamp-net.com
 PERMIT_PACKAGE =	Yes
 
-WANTLIB += 		X11 Xau Xdmcp Xext c m
+WANTLIB +=		X11 Xau Xdmcp Xext c m
 
 SITES =			http://www.daidouji.com/oneko/distfiles/
 
