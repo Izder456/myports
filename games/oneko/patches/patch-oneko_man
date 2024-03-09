@@ -1,0 +1,11 @@
+Index: oneko.man
+--- oneko.man.orig
++++ oneko.man
+@@ -1,6 +1,5 @@
+ .TH ONEKO 6
+-.SH NAME oneko
+-The program oneko creates a cute cat chasing around your mouse cursor.
++.SH NAME oneko \- Creates a cute cat chasing around your mouse cursor.
+ .SH SYNOPSIS
+ .B oneko
+ [\fB-help\fP] [\fB-tora\fP]
