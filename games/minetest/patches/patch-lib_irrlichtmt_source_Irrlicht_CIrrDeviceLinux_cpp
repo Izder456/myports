@@ -1,0 +1,11 @@
+Index: lib/irrlichtmt/source/Irrlicht/CIrrDeviceLinux.cpp
+--- lib/irrlichtmt/source/Irrlicht/CIrrDeviceLinux.cpp.orig
++++ lib/irrlichtmt/source/Irrlicht/CIrrDeviceLinux.cpp
+@@ -11,6 +11,7 @@
+ #include <sys/utsname.h>
+ #include <time.h>
+ #include <locale.h>
++#include <unistd.h>
+ #include "IEventReceiver.h"
+ #include "ISceneManager.h"
+ #include "IGUIElement.h"
