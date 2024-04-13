@@ -1,0 +1,27 @@
+This project is an attempt at the digital preservation of Half-Life.
+The focus is not on features but instead to create a maintainable
+codebase which can be easily ported to future POSIX platforms.
+
+The goal is not necessarily to support as many platforms as possible,
+but instead open / sane platforms that are accessible to people. I
+don't plan to faff about with AppStore packaging systems. I also
+don't plan to support any platform which does not provide a system
+compiler.
+
+The game data provided by this project is appropriate to distribute
+and does not constitute piracy. The game data was made public by 
+Valve and shared on popular services such as FilePlanet and magazine 
+demo disks.
+
+The original intention was probably to popularize their Steam DRM
+platform but nonetheless, the data was made public. It is also
+extracted using standard GCF tools (as distributed on Valve's
+Developer Wiki). There has been no cracking involved. These publicly
+distributable files are as follows:
+
+  steaminstall_halflife.exe
+   - Provides Half-Life
+  steaminstall_opfor.exe
+   - Provides Opposing Force
+  steaminstall_full.exe
+   - Provides Half-Life and Opposing Force
