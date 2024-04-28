@@ -17,7 +17,7 @@
 - ~~[games/billyfrontier](https://cvsweb.openbsd.org/ports/games/billyfrontier) - quicktime space-age spaghetti western~~ *merged upstream*
 - ~~[audio/deadbeef-plugin-mpris2](https://cvsweb.openbsd.org/ports/audio/deadbeef-plugin-mpris2) - deadbeef plugin for mpris2 support~~ *merged upstream*
 - ~~[emulators/melonds](https://cvsweb.openbsd.org/ports/emulators/melonds) - Nintendo DS emulator~~ *merged upstream*
-- [games/classicube](games/classicube) - Clean Room Classic Minecraft client written in C from scratch **not finished, _see TODO_**
+- [games/classicube](games/classicube) - Clean Room Classic Minecraft client written in C from scratch 
 - [games/openhl](games/openhl) - digital preservation of Half-Life **not finished, _see TODO_**
 - [misc/funny-manpages](misc/funny-manpages) - Funny Unix Manpages
 - [x11/emwm](x11/emwm) - enhanced motif window manager (MWM fork)

@@ -12,7 +12,7 @@
 #
 # Very short description of the package (<=60 chars, usually starts lower-case)
 #		|----------------------------------------------------------|
-COMMENT =	Clean Room Classic Minecraft client written in C from scratch
+COMMENT =	cleanroom Classic Minecraft client written in C
 # COMMENT-foo =	???	for multi packages
 
 #
@@ -159,7 +159,7 @@ COMPILER =		base-clang ports-gcc base-gcc
 # Dependencies
 BUILD_DEPENDS =	net/curl \
 		audio/openal
-#RUN_DEPENDS =		???
+RUN_DEPENDS =	devel/desktop-file-utils
 #LIB_DEPENDS =		???
 #TEST_DEPENDS =		???
 
@@ -261,6 +261,17 @@ ALL_TARGET =		ClassiCube
 #TEST_TARGET =		???
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/ClassiCube ${PREFIX}/bin/
+	${INSTALL_PROGRAM} ${WRKSRC}/ClassiCube ${PREFIX}/bin/classicube_run
+	${INSTALL_DATA_DIR} ${PREFIX}/share/licenses/classicube
+	${INSTALL_DATA} ${WRKSRC}/license.txt \
+		${PREFIX}/share/licenses/classicube/license.txt
+	${INSTALL_DATA_DIR} ${PREFIX}/share/applications
+	${INSTALL_DATA_DIR} ${PREFIX}/share/classicube
+	${INSTALL_DATA} ${WRKSRC}/misc/CCicon.png \
+		${PREFIX}/share/classicube/CCicon.png
+	@${SUBST_DATA} ${FILESDIR}/classicube.desktop \
+		${PREFIX}/share/applications/classicube.desktop
+	@${SUBST_PROGRAM} ${FILESDIR}/classicube \
+		${PREFIX}/bin/classicube
 
 .include <bsd.port.mk>

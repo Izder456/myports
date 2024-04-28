@@ -1,1 +1,10 @@
-@bin bin/ClassiCube
+bin/classicube
+@bin bin/classicube_run
+share/applications/
+share/applications/classicube.desktop
+share/classicube/
+share/classicube/CCicon.png
+share/licenses/
+share/licenses/classicube/
+share/licenses/classicube/license.txt
+@tag update-desktop-database

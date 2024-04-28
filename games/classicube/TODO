@@ -1,2 +1,0 @@
-1. Patch the game to download jar to /tmp, and extract assets to a
-dir in $XDG_DATA_HOME, as we usually have write perms there
