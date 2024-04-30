@@ -1,0 +1,25 @@
++-------------------------------------------------------------------------------
+| Running ${PKGSTEM} on OpenBSD
++-------------------------------------------------------------------------------
+
+PLAYING AUDIO FILES:
+
+    nxbelld can play PCM encoded WAVE files. If you want to do this,
+    you can convert your favorite sound files to a PCM encoded WAVE file:
+
+	ffmpeg -i <file> -vn -acodec pcm_s16le out.wav
+
+THROTTLING:
+
+    nxbelld can also throttle the bell if it is rung too often (e.g. some
+    terminal program goes crazy), and/or disable the system's audible bell (so
+    that you don't get the annoying PC speaker beep in addition to your
+    nxbelld action).
+
+
+INFO FOR SNDIO USE:
+
+    When using sndio, the beeps are slightly shorter than the specified beep
+    duration.  Beeps of 120ms or shorter don't get played at all.  This can be
+    worked around simply by specifying a longer duration using the --duration
+    option.
