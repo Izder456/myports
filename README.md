@@ -22,6 +22,12 @@
 - [x11/nxbelld](x11/nxbelld) - fork of xbelld, the X bell daemon for machines w/o a pcspkr
 - [games/classicube](games/classicube) - Clean Room Classic Minecraft client written in C from scratch 
 - [games/openhl](games/openhl) - digital preservation of Half-Life **not finished, _see TODO_**
-- [misc/funny-manpages](misc/funny-manpages) - Funny Unix Manpages
 - [x11/emwm](x11/emwm) - enhanced motif window manager (MWM fork)
 - [x11/emwm-utils](x11/emwm-utils) - session manager and a toolchest-like application launcher.
+
+### What will stay here?
+
+- [misc/funny-manpages](misc/funny-manpages) - funny unix manpages 
+  - **WHY?:** too stupid of a project to warrant a merge IMHO. *if you disagree, feel free to put it in* `ports@openbsd.org`
+- [games/oneko](games/oneko) - cat that chases around your cursor 
+  - **WHY?:**  License (or lack of) is incompatible with [OpenBSD's Copyright Policy](https://www.openbsd.org/policy.html)
