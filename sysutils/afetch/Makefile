@@ -12,6 +12,8 @@ MAINTAINER =		izzy Meyer <izder456@disroot.org>
 
 WANTLIB +=	c pthread
 
+COMPILER =	base-clang ports-gcc base-gcc
+
 # GPL v3+
 PERMIT_PACKAGE =	Yes
 
