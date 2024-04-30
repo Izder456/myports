@@ -1,5 +1,0 @@
-make assets load correctly, game window doesn't open
-
-I think this has something to do with build.sh but I am unsure.
-
-this also clashes with lang/hashlink, as that also provides bin/hl

@@ -21,7 +21,6 @@
 - [sysutils/shuf](sysutils/shuf) - ISC licensed reimplementation of GNU shuf
 - [x11/nxbelld](x11/nxbelld) - fork of xbelld, the X bell daemon for machines w/o a pcspkr
 - [games/classicube](games/classicube) - Clean Room Classic Minecraft client written in C from scratch 
-- [games/openhl](games/openhl) - digital preservation of Half-Life **not finished, _see TODO_**
 - [x11/emwm](x11/emwm) - enhanced motif window manager (MWM fork)
 - [x11/emwm-utils](x11/emwm-utils) - session manager and a toolchest-like application launcher.
 
