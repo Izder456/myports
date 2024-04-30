@@ -10,6 +10,8 @@ HOMEPAGE =		https://github.com/13-CF/afetch
 
 MAINTAINER =		izzy Meyer <izder456@disroot.org>
 
+WANTLIB +=	c pthread
+
 # GPL v3+
 PERMIT_PACKAGE =	Yes
 
