@@ -9,10 +9,10 @@ This port provides two executables, one a script and one a binary:
 
     classicube_run
 	the binary of the game engine itself.
-    	do not run this manually (keep reading)
+	do not run this manually (keep reading)
 
     classicube
 	a wrapper script that opens classicube_run in a sane location
 	so that the assets get saved to a user-writable location.
-	
-	the script opens & downloads assets to/from $HOME/.local/share/classicube
+	the script opens & downloads assets to/from
+	$HOME/.local/share/classicube
