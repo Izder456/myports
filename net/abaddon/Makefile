@@ -31,9 +31,10 @@ COMPILER =	base-clang ports-gcc base-gcc
 
 MODULES =	devel/cmake
 
-RUN_DEPENDS =	databases/sqlite3
+BUILD_DEPENDS =	textproc/nlohmann-json
 LIB_DEPENDS =	audio/rnnoise \
 				audio/opus \
+				databases/sqlite3 \
 				devel/atk2mm \
 				devel/fmt \
 				devel/glib2mm \
