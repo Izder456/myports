@@ -1,2 +1,3 @@
 add pkg/PLIST
-fix potential harfbuzz plist issue
+fix potential harfbuzz plist issue:
+	harfbuss.18.8 and harfbuzz.18.9 discrepancy
