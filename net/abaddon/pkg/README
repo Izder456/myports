@@ -18,7 +18,6 @@ For example the web client sends lots of telemetry via the /science
 endpoint (uBlock origin stops this) as well as in the headers of
 all requests.
 
-
 CONFIGURATION
 
 abaddon.ini will also be automatically used if located at
