@@ -25,7 +25,7 @@ WANTLIB +=	crypto curl fmt fontconfig freetype gdk-3 gdk_pixbuf-2.0
 WANTLIB +=	gdkmm-3.0 gio-2.0 giomm-2.4 glib-2.0 glibmm-2.4 gobject-2.0
 WANTLIB +=	gtk-3 gtkmm-3.0 handy-1 harfbuzz intl m opus pango-1.0
 WANTLIB +=	pangocairo-1.0 pangoft2-1.0 pangomm-1.4 rnnoise secret-1
-WANTLIB +=	sigc-2.0 sodium spdlog ssl z
+WANTLIB +=	sigc-2.0 sodium spdlog sqlite3 ssl z
 
 COMPILER =	base-clang ports-gcc base-gcc
 
@@ -35,9 +35,10 @@ RUN_DEPENDS =	databases/sqlite3
 LIB_DEPENDS =	audio/rnnoise \
 				audio/opus \
 				devel/atk2mm \
-				devel/glib2mm \
-				devel/spdlog \
 				devel/fmt \
+				devel/glib2mm \
+				devel/harfbuzz \
+				devel/spdlog \
 				net/curl \
 				security/libsodium \
 				x11/gnome/libsecret \
