@@ -1,0 +1,2 @@
+add pkg/PLIST
+fix potention harfbuzz plist issue
