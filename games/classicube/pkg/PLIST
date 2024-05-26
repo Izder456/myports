@@ -1,8 +1,8 @@
 bin/classicube
-@bin bin/classicube_run
 share/applications/classicube.desktop
 share/classicube/
 share/classicube/CCicon.png
+@bin share/classicube/classicube_run
 share/doc/pkg-readmes/${PKGSTEM}
 share/licenses/
 share/licenses/classicube/

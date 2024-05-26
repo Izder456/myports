@@ -25,12 +25,12 @@ USE_GMAKE =		Yes
 ALL_TARGET =		ClassiCube
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/ClassiCube ${PREFIX}/bin/classicube_run
+	${INSTALL_DATA_DIR} ${PREFIX}/share/classicube
+	${INSTALL_PROGRAM} ${WRKSRC}/ClassiCube ${PREFIX}/share/classicube/classicube_run
 	${INSTALL_DATA_DIR} ${PREFIX}/share/licenses/classicube
 	${INSTALL_DATA} ${WRKSRC}/license.txt \
 		${PREFIX}/share/licenses/classicube/license.txt
 	${INSTALL_DATA_DIR} ${PREFIX}/share/applications
-	${INSTALL_DATA_DIR} ${PREFIX}/share/classicube
 	${INSTALL_DATA} ${WRKSRC}/misc/CCicon.png \
 		${PREFIX}/share/classicube/CCicon.png
 	@${SUBST_DATA} ${FILESDIR}/classicube.desktop \

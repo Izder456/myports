@@ -2,4 +2,4 @@
 
 mkdir -p $HOME/.local/share/classicube
 cd $HOME/.local/share/classicube
-${TRUEPREFIX}/bin/classicube_run
+${TRUEPREFIX}/share/classicube/classicube_run
