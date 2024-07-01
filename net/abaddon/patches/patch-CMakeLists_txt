@@ -1,0 +1,11 @@
+--- CMakeLists.txt.orig	Mon May 20 16:29:36 2024
++++ CMakeLists.txt	Mon May 20 16:30:34 2024
+@@ -2,7 +2,7 @@
+ 
+ project(abaddon)
+ 
+-set(ABADDON_RESOURCE_DIR "/usr/share/abaddon" CACHE PATH "Fallback directory for resources on Linux")
++set(ABADDON_RESOURCE_DIR "/usr/local/share/abaddon" CACHE PATH "Fallback directory for resources on Linux")
+ 
+ set(CMAKE_CXX_STANDARD 17)
+ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/")

@@ -1,0 +1,27 @@
+--- src/platform.cpp.orig.port	Thu Apr  4 02:03:45 2024
++++ src/platform.cpp	Tue May 21 09:10:41 2024
+@@ -1,5 +1,5 @@
+ #include "platform.hpp"
+-#include <config.h>
++#include "config.h"
+ #include <filesystem>
+ #include <fstream>
+ #include <string>
+@@ -84,7 +84,7 @@
+     return ".";
+ }
+ 
+-#elif defined(__linux__)
++#elif defined(__linux__) || defined(BSD)
+ std::string Platform::FindResourceFolder() {
+     static std::string found_path;
+     static bool found = false;
+@@ -94,7 +94,7 @@
+     if (home_env != nullptr) {
+         const static std::string home_path = home_env + "/.local/share/abaddon"s;
+ 
+-        for (const auto &path : { "."s, home_path, std::string(ABADDON_DEFAULT_RESOURCE_DIR) }) {
++        for (const auto &path : { "."s, home_path, std::string("/usr/local/share/abaddon") }) {
+             if (util::IsFolder(path + "/res") && util::IsFolder(path + "/css")) {
+                 found_path = path;
+                 found = true;

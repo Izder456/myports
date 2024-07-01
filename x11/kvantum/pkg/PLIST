@@ -1,7 +1,5 @@
 @bin bin/kvantummanager
 @bin bin/kvantumpreview
-lib/qt6/
-lib/qt6/plugins/
 lib/qt6/plugins/styles/
 @so lib/qt6/plugins/styles/libkvantum.so
 share/Kvantum/

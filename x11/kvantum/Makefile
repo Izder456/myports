@@ -12,12 +12,12 @@ HOMEPAGE =		https://github.com/tsujan/Kvantum
 # GPLv3+
 PERMIT_PACKAGE =	Yes
 
-WANTLIB +=		${COMPILER_LIBCXX} GL ICE KF6WindowSystem Qt6Core Qt6Gui
-WANTLIB += 		Qt6Svg Qt6Widgets SM X11 Xext c m
-
 COMPILER =		base-clang ports-gcc
 
 MODULES =		devel/cmake
+
+WANTLIB +=		${COMPILER_LIBCXX} GL ICE KF6WindowSystem Qt6Core Qt6Gui
+WANTLIB +=		Qt6Svg Qt6Widgets SM X11 Xext c m
 
 BUILD_DEPENDS =		devel/kf6/extra-cmake-modules
 LIB_DEPENDS =		devel/kf6/kwindowsystem \
@@ -27,6 +27,7 @@ RUN_DEPENDS =		x11/gtk+4,-guic \
 			devel/desktop-file-utils
 
 CONFIGURE_ARGS =	-DKF6WindowSystem_DIR="${LOCALBASE}/lib/cmake/KF6WindowSystem/" \
+			-DQt6_DIR="${LOCALBASE}/lib/qt6/cmake/Qt6/" \
 			-DCMAKE_INSTALL_PREFIX="${LOCALBASE}"
 
 WRKSRC =		${WRKDIST}/Kvantum
