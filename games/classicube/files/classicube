@@ -1,5 +1,0 @@
-#!/bin/sh
-
-mkdir -p $HOME/.local/share/classicube
-cd $HOME/.local/share/classicube
-${TRUEPREFIX}/share/classicube/classicube_run
