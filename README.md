@@ -18,6 +18,7 @@
 - ~~[audio/deadbeef-plugin-mpris2](https://cvsweb.openbsd.org/ports/audio/deadbeef-plugin-mpris2) - deadbeef plugin for mpris2 support~~ *merged upstream*
 - ~~[emulators/melonds](https://cvsweb.openbsd.org/ports/emulators/melonds) - Nintendo DS emulator~~ *merged upstream*
 - ~~[games/classicube](games/classicube) - Clean Room Classic Minecraft client written in C from scratch~~ *merged upstream* 
+- [games/prismlauncher](games/prismlauncher) - free and open-source launcher for Minecraft, based on MultiMC *unfinished, see TODO*
 - [x11/kvantum](x11/kvantum) - SVG-based theme engine for Qt and KDE
 - [x11/kvantum-qt5](x11/kvantum-qt5) - SVG-based theme engine for Qt5 and KDE
 - [net/abaddon](net/abaddon) - alternative & light Discord client with voice support **unfinished, see TODO**

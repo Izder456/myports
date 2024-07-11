@@ -1,0 +1,1 @@
+WANTLIB is fucked up. Qt6Core5Compat and cmark are masked for some reason. Too tired to bother fixing for now.
