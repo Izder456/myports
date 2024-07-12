@@ -20,7 +20,10 @@ CATEGORIES =		games
 
 HOMEPAGE =		https://prismlauncher.org
 
-# Apache 2.0
+# GPLv3+ libraries/launcher
+# LGPLv3+ libraries/libnbtplusplus, LGPLv2 libraries/rainbow
+# BSD libraries/cmark, MIT libraries/lionshead
+# MIT libraries/tomlplusplus, MIT libraries/filesystem
 PERMIT_PACKAGE =	Yes
 
 WANTLIB +=		${COMPILER_LIBCXX} GL Qt6Concurrent Qt6Core Qt6Core5Compat
