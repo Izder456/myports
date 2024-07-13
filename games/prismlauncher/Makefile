@@ -42,10 +42,11 @@ RUN_DEPENDS =		audio/openal \
 LIB_DEPENDS =		x11/qt6/qt5compat \
 			textproc/cmark
 
-CONFIGURE_ARGS =	-DCMAKE_INSTALL_PREFIX="${LOCALBASE}" \
+CONFIGURE_ARGS =	-DCMAKE_BUILD_TYPE=Release \
+			-DCMAKE_INSTALL_PREFIX="${LOCALBASE}" \
+			-DENABLE_LTO=ON \
 			-DLauncher_BUILD_PLATFORM="openbsd" \
 			-DLauncher_QT_VERSION_MAJOR="6" \
-			-DBGL_SYSTEM_LWJGL2_PATH="${LOCALBASE}/share/lwjgl/" \
-			-DBGL_SYSTEM_LWJGL3_PATH="${LOCALBASE}/share/lwjgl3/"
+			-Dorg.lwjgl.librarypath="${LOCALBASE}/share/lwjgl"
 
 .include <bsd.port.mk>
