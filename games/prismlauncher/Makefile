@@ -45,8 +45,7 @@ LIB_DEPENDS =		x11/qt6/qt5compat \
 CONFIGURE_ARGS =	-DCMAKE_BUILD_TYPE=Release \
 			-DCMAKE_INSTALL_PREFIX="${LOCALBASE}" \
 			-DENABLE_LTO=ON \
-			-DLauncher_BUILD_PLATFORM="openbsd" \
-			-DLauncher_QT_VERSION_MAJOR="6" \
-			-Dorg.lwjgl.librarypath="${LOCALBASE}/share/lwjgl"
+			-DLauncher_BUILD_PLATFORM="OpenBSD" \
+			-DLauncher_QT_VERSION_MAJOR="6"
 
 .include <bsd.port.mk>
