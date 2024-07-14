@@ -1,3 +1,1 @@
 WANTLIB is fucked up. Qt6Core5Compat and cmark are masked for some reason. Too tired to bother fixing for now.
-
-ENSURE lwjgl/3 is loaded properly. -Dorg.lwjgl.library path should do it. more testing needed 
