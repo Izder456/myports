@@ -1,26 +1,31 @@
-COMMENT = session manager and a toolchest-like application launcher.
+COMMENT =	session manager and a toolchest-like application launcher
 
-V = 1.2
-SITES = https://fastestcode.org/dl/
-DISTNAME = emwm-utils-src-${V}
-PKGNAME = emwm-utils-${V}
-EXTRACT_SUFX = .tar.xz
+V =		1.2
+SITES =		https://fastestcode.org/dl/
+DISTNAME =	emwm-utils-src-${V}
+PKGNAME =	emwm-utils-${V}
+EXTRACT_SUFX =	.tar.xz
 
-CATEGORIES = x11
+CATEGORIES =	x11
 
-HOMEPAGE = https://fastestcode.org/emwm.html
+HOMEPAGE =	https://fastestcode.org/emwm.html
 
-MAINTAINER = izzy Meyer <izder456@disroot.org>
+MAINTAINER =	izzy Meyer <izder456@disroot.org>
 
 # MIT
 PERMIT_PACKAGE = Yes
 
-LIB_DEPENDS = x11/motif
+WANTLIB += X11 Xinerama Xm Xrandr Xss Xt c
 
-WANTLIB +=	X11 Xext Xinerama Xm Xrandr Xt c m
+LIB_DEPENDS =	x11/motif
 
-NO_TEST = Yes
+MAKE_FLAGS =	RCDIR=${PREFIX}/lib/X11 \
+		CFLAGS="${CFLAGS} -I./Xm -I${X11BASE}/include -I${LOCALBASE}/include"
+FAKE_FLAGS =	PREFIX=${WRKINST}${PREFIX} \
+		APPLRESDIR=${WRKINST}${PREFIX}/lib/X11/app-defaults \
+		MANDIR=${WRKINST}${PREFIX}/man \
+		RCDIR=${WRKINST}${PREFIX}/lib/X11
 
-FAKE_FLAGS = PREFIX=${WRKINST}${PREFIX}
+NO_TEST =	Yes
 
 .include <bsd.port.mk>
