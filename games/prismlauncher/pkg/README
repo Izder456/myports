@@ -15,7 +15,7 @@ Java.
 ${PKGSTEM} also needs some extra handling to make lwjgl and lwjgl3 work. There
 are a few scripts ${MAINTAINER} wrote up for fixing this.
 
-Getting ${PKGSTEM} to launch with lwgjgl 
+Getting ${PKGSTEM} to launch with lwgjgl
 ------------------------------------------
 
 - For Minecraft <= 1.12.2, use Java 1.8 and make sure LWJGL 2 & 3 are
@@ -23,16 +23,16 @@ Getting ${PKGSTEM} to launch with lwgjgl
 
   # pkg_add jdk%1.8 lwjgl lwjgl3
 
-  Change the Java implementation to: 
+  Change the Java implementation to:
 
   ${LOCALBASE}/share/PrismLauncher/runtimes/1.8.0
 
 - While Minecraft 1.13 - 1.16.5 can run on newer versions, mod loaders
-  are known to be broken on versions newer than 11: 
+  are known to be broken on versions newer than 11:
 
   # pkg_add jdk%11 lwjgl lwjgl3
 
-  Change the Java installation to: 
+  Change the Java installation to:
 
   ${LOCALBASE}/share/PrismLauncher/runtimes/11
 
