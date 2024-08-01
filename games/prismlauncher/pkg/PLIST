@@ -4,6 +4,11 @@ share/PrismLauncher/JavaCheck.jar
 share/PrismLauncher/NewLaunch.jar
 share/PrismLauncher/NewLaunchLegacy.jar
 share/PrismLauncher/qtlogging.ini
+share/PrismLauncher/runtimes/
+share/PrismLauncher/runtimes/1.8.0
+share/PrismLauncher/runtimes/11
+share/PrismLauncher/runtimes/17
+share/PrismLauncher/runtimes/21
 share/applications/org.prismlauncher.PrismLauncher.desktop
 share/doc/pkg-readmes/${PKGSTEM}
 share/icons/hicolor/scalable/apps/org.prismlauncher.PrismLauncher.svg

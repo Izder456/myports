@@ -12,54 +12,47 @@ However, it is important to note that older versions of Minecraft
 (especially with mods) will not play well with the latest version of
 Java.
 
-By default, ${PKGSTEM} is configured to play the latest version
-of Minecraft (use games/lwjgl3 and devel/jdk%17 as runtime dependencies).
+${PKGSTEM} also needs some extra handling to make lwjgl and lwjgl3 work. There
+are a few scripts ${MAINTAINER} wrote up for fixing this.
 
-LWJGL2/3 Workaround
--------------------
+Getting ${PKGSTEM} to launch with lwgjgl 
+------------------------------------------
 
-By Default, ${PKGSTEM} attempts to use the lwjgl jar for linux. We do not want
-that. So, instead, we can override it with launch arguments in the instance:
-
-- For Minecraft <= 1.13.2
-
-  You need games/lwjgl installed of course. 
-
-  # pkg_add lwjgl
-
-  Put this in the launch arguments:
-  
-  -Dorg.lwjgl.librarypath="${LOCALBASE}/share/lwjgl"
-
-- For Minecraft > 1.13.2
-
-  You need games/lwjgl3 installed of course.
-
-  # pkg_add lwjgl3
-
-  Put this in the launch arguments:
-
-  -Dorg.lwjgl.librarypath="${LOCALBASE}/share/lwjgl3"
-
-Running older versions of Minecraft
------------------------------------
-
-- For Minecraft <= 1.12.2, use Java 1.8 and make sure LWJGL 2 is
+- For Minecraft <= 1.12.2, use Java 1.8 and make sure LWJGL 2 & 3 are
   installed.
 
-  # pkg_add jdk%1.8 lwjgl
+  # pkg_add jdk%1.8 lwjgl lwjgl3
+
+  Change the Java implementation to: 
+
+  ${LOCALBASE}/share/PrismLauncher/runtimes/1.8.0
 
 - While Minecraft 1.13 - 1.16.5 can run on newer versions, mod loaders
-  are known to be broken on versions newer than 11:
+  are known to be broken on versions newer than 11: 
 
-  # pkg_add jdk%11
+  # pkg_add jdk%11 lwjgl lwjgl3
 
-- Since Minecraft 1.17, it is required to use the latest version of
-  Java.
+  Change the Java installation to: 
 
-  # pkg_add jdk
+  ${LOCALBASE}/share/PrismLauncher/runtimes/11
 
-  (select latest when prompted)
+- For Minecraft 1.17 - 1.19.4, use Java 17 and make sure LWJGL 2 & 3 are
+  installed.
+
+  # pkg_add jdk%17 lwjgl lwjgl3
+
+  Change the Java installation to:
+
+  ${LOCALBASE}/share/PrismLauncher/runtimes/17
+
+- For Minecraft > 1.19.4, use Java 21 and make sure LWJGL 2 & 3 are
+  installed.
+
+  # pkg_add jdk%17 lwjgl lwjgl3
+
+  Change the Java installation to:
+
+  ${LOCALBASE}/share/PrismLauncher/runtimes/21
 
 Change Java installation for a Minecraft instance
 -------------------------------------------------

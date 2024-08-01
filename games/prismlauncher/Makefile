@@ -20,6 +20,8 @@ CATEGORIES =		games
 
 HOMEPAGE =		https://prismlauncher.org
 
+MAINTAINER =	izzy Meyer <izder456@disroot.org>
+
 # GPLv3+ libraries/launcher
 # LGPLv3+ libraries/libnbtplusplus, LGPLv2 libraries/rainbow
 # BSD libraries/cmark, MIT libraries/lionshead
@@ -47,5 +49,16 @@ CONFIGURE_ARGS =	-DCMAKE_BUILD_TYPE=Release \
 			-DENABLE_LTO=ON \
 			-DLauncher_BUILD_PLATFORM="OpenBSD" \
 			-DLauncher_QT_VERSION_MAJOR="6"
+
+post-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/share/PrismLauncher/runtimes
+	@${SUBST_PROGRAM} ${FILESDIR}/1.8.0 \
+		${PREFIX}/share/PrismLauncher/runtimes/1.8.0
+	@${SUBST_PROGRAM} ${FILESDIR}/11 \
+		${PREFIX}/share/PrismLauncher/runtimes/11
+	@${SUBST_PROGRAM} ${FILESDIR}/17 \
+		${PREFIX}/share/PrismLauncher/runtimes/17
+	@${SUBST_PROGRAM} ${FILESDIR}/21 \
+		${PREFIX}/share/PrismLauncher/runtimes/21
 
 .include <bsd.port.mk>
