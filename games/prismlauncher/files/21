@@ -2,7 +2,7 @@
 
 export JAVA_HOME=/usr/local/jdk-21
 
-LWJGL_JLP_OVRD="/usr/local/share/lwjgl3:/usr/local/lib:/usr/lib"
+LWJGL_JLP_OVRD="${TRUEPREFIX}/share/lwjgl:${TRUEPREFI}/share/lwjgl3:${TRUEPREFIX}/lib:/usr/lib"
 
 LWJGL_OVRD="/usr/local/share/lwjgl3/lwjgl.jar"
 LWJGL_OGL_OVRD="/usr/local/share/lwjgl3/lwjgl-opengl.jar"

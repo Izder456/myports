@@ -36,6 +36,7 @@ MODULES =		devel/cmake \
 			java
 MODJAVA_VER =		17
 
+BUILD_DEPENDS =	devel/kf6/extra-cmake-modules
 RUN_DEPENDS =		audio/openal \
 			games/lwjgl3 \
 			x11/gtk+4,-guic \
