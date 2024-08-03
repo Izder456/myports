@@ -1,6 +1,6 @@
 #!/bin/sh
 
-export JAVA_HOME="${TRUEPREFIX}/share/jdk-21"
+export JAVA_HOME="${TRUEPREFIX}/jdk-21"
 
 LWJGL_JLP_OVRD="${TRUEPREFIX}/share/lwjgl:${TRUEPREFIX}/lib:/usr/lib"
 
