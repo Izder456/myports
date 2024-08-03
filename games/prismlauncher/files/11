@@ -1,15 +1,15 @@
 #!/bin/sh
 
-export JAVA_HOME=/usr/local/jdk-11
+export JAVA_HOME="${TRUEPREFIX}/jdk-11"
 
-LWJGL_JLP_OVRD="${TRUEPREFIX}/share/lwjgl:${TRUEPREFIX}/share/lwjgl3:${TRUEPREFIX}/lib:/usr/lib"
+LWJGL_JLP_OVRD="${TRUEPREFIX}/share/lwjgl:${TRUEPREFIX}/lib:/usr/lib"
 
-LWJGL_OVRD="/usr/local/share/lwjgl/lwjgl.jar"
-LWJGL_OGL_OVRD="/usr/local/share/lwjgl3/lwjgl-opengl.jar"
-LWJGL_OAL_OVRD="/usr/local/share/lwjgl3/lwjgl-openal.jar"
-LWJGL_GLFW_OVRD="/usr/local/share/lwjgl3/lwjgl-glfw.jar"
-LWJGL_STB_OVRD="/usr/local/share/lwjgl3/lwjgl-stb.jar"
-LWJGL_JEM_OVRD="/usr/local/share/lwjgl3/lwjgl-jemalloc.jar"
+LWJGL_OVRD="${TRUEPREFIX}/share/lwjgl3/lwjgl.jar"
+LWJGL_OGL_OVRD="${TRUEPREFIX}/share/lwjgl3/lwjgl-opengl.jar"
+LWJGL_OAL_OVRD="${TRUEPREFIX}share/lwjgl3/lwjgl-openal.jar"
+LWJGL_GLFW_OVRD="${TRUEPREFIX}/share/lwjgl3/lwjgl-glfw.jar"
+LWJGL_STB_OVRD="${TRUEPREFIX}/share/lwjgl3/lwjgl-stb.jar"
+LWJGL_JEM_OVRD="${TRUEPREFIX}/share/lwjgl3/lwjgl-jemalloc.jar"
 
 
 echo CMD IN: ${@}

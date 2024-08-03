@@ -2,7 +2,7 @@
 
 export JAVA_HOME=${TRUEPREFIX}/jdk-17
 
-LWJGL_JLP_OVRD="${TRUEPREFIX}/share/lwjgl:${TRUEPREFIX}/share/lwjgl3:${TRUEPREFIX}/lib:/usr/lib"
+LWJGL_JLP_OVRD="${TRUEPREFIX}/share/lwjgl:${TRUEPREFIX}/lib:/usr/lib"
 
 LWJGL_OVRD="${TRUEPREFIX}/share/lwjgl3/lwjgl.jar"
 LWJGL_OGL_OVRD="${TRUEPREFIX}/share/lwjgl3/lwjgl-opengl.jar"
