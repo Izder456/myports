@@ -1,6 +1,6 @@
 #!/bin/sh
 
-export JAVA_HOME=${TRUEPREFIX}/jdk-17
+export JAVA_HOME="${TRUEPREFIX}/jdk-17"
 
 LWJGL_JLP_OVRD="${TRUEPREFIX}/share/lwjgl:${TRUEPREFIX}/lib:/usr/lib"
 
