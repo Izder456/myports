@@ -1,5 +1,6 @@
---- src/platform.cpp.orig.port	Thu Apr  4 02:03:45 2024
-+++ src/platform.cpp	Tue May 21 09:10:41 2024
+Index: src/platform.cpp
+--- src/platform.cpp.orig
++++ src/platform.cpp
 @@ -1,5 +1,5 @@
  #include "platform.hpp"
 -#include <config.h>
@@ -7,16 +8,16 @@
  #include <filesystem>
  #include <fstream>
  #include <string>
-@@ -84,7 +84,7 @@
+@@ -84,7 +84,7 @@ std::string Platform::FindStateCacheFolder() {
      return ".";
  }
  
 -#elif defined(__linux__)
-+#elif defined(__linux__) || defined(BSD)
++#elif defined(__linux__) || defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__)
  std::string Platform::FindResourceFolder() {
      static std::string found_path;
      static bool found = false;
-@@ -94,7 +94,7 @@
+@@ -94,7 +94,7 @@ std::string Platform::FindResourceFolder() {
      if (home_env != nullptr) {
          const static std::string home_path = home_env + "/.local/share/abaddon"s;
  

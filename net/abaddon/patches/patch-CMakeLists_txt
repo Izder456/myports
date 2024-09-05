@@ -1,6 +1,7 @@
---- CMakeLists.txt.orig	Mon May 20 16:29:36 2024
-+++ CMakeLists.txt	Mon May 20 16:30:34 2024
-@@ -2,7 +2,7 @@
+Index: CMakeLists.txt
+--- CMakeLists.txt.orig
++++ CMakeLists.txt
+@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.16)
  
  project(abaddon)
  
